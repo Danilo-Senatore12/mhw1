@@ -1,3 +1,67 @@
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+
+    .central-txt {
+        font-size: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    header {
+        align-items: center;
+        padding: 10px;
+    }
+
+    #logo {
+        margin-left: 0;
+        width: 80px;
+        height: auto;
+    }
+
+    .login-button {
+        margin-right: 0;
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .box-scelta {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .box-scelta-1, .box-scelta-2, .box-scelta-3, .box-scelta-4, .box-scelta-5, .box-scelta-6 {
+        width: 90px;
+        height: 90px;
+    }
+
+    .box-negozi {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonne per dispositivi mobili */
+        
+    }
+
+    .box-negozi img {
+        height: auto;
+    }
+
+    .categorie-buttons {
+        gap: 15px;
+        margin-bottom: 4em;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    footer img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 body {
     font-family: "Glovo","Arial","Helvetica Neue", Helvetica, sans-serif;
     margin: 0;
@@ -5,6 +69,7 @@ body {
     background-image: url('path/to/glovo-logo.png');
     background-position: top left;
     background-repeat: no-repeat;
+    overflow-x: hidden; /* Evita lo scroll orizzontale */
 }
 
 .content-container {
@@ -77,8 +142,7 @@ nav {
     align-items: center;
 }
 
-.login-button {
-    text-align: end;
+.login-button button {
     background-color: #00a082; 
     color: white;
     border: none;
@@ -163,13 +227,13 @@ nav {
 }
 
 .box-negozi {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 10px; 
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    display: grid; /* Usa un layout a griglia */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonne di larghezza uguale */
+    gap: 10px; /* Spazio tra i box */
     margin-left: 10rem;
     margin-right: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     justify-items: center; 
     align-items: center; 
 }
@@ -188,8 +252,8 @@ nav {
 }
 
 .box-negozi img{
-    width: 100%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     border-radius: 10px;
 }
 
@@ -253,8 +317,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-top-left-radius: 15%;
-    border-top-right-radius: 15%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
     background-color: #1d1d1d;
     color: white;
     text-align: center;
